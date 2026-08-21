@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shristi Art Academy | Drawing & Painting Classes Since 1976</title>
+<meta name="description" content="Shristi Art Academy — nurturing artists since 1976. Drawing, painting, sketching, competition and exam preparation classes.">
+<meta name="keywords" content="Shristi Art Academy, drawing classes, painting classes, art academy, sketching classes">
+<meta name="author" content="Shristi Art Academy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shristi Art Academy | Admissions Open">
+<meta property="og:description" content="Nurturing artists since 1976. Admissions now open.">
+<meta property="og:image" content="https://i.postimg.cc/4d1d9WVR/file-0000000023e482079335c55ea8d52c61.png">
+
+<link rel="preconnect" href="https://i.postimg.cc">
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.94/build/spline-viewer.js"></script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+input[type="radio"]{display:none}
+body{
+    background:#FDF6E3;
+    padding-bottom:82px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.page{
+    display:none;
+    padding:40px 24px;
+    max-width:900px;
+    margin:auto;
+    animation:fadeIn .3s ease;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+#tab-home:checked~#home{display:block}
+#tab-about:checked~#about{display:block}
+#tab-admissions:checked~#admissions{display:block}
+#tab-gallery:checked~#gallery{display:block}
+body:not(:has(input:checked)) #home{display:block}
+
+.page h2{font-size:2rem;font-weight:800;margin-bottom:12px;color:#1B365D}
+.page p{color:#666;line-height:1.6}
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    min-height:70px;
+    background:#171717;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    z-index:100;
+    padding:5px 3px;
+}
+.bottom-nav label{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+    color:#777;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:8px 5px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.2s;
+    min-width:68px;
+}
+.bottom-nav label svg{
+    width:23px;height:23px;
+    stroke:currentColor;fill:none;stroke-width:2;
+    stroke-linecap:round;stroke-linejoin:round;
+}
+.bottom-nav label:hover{
+    color:#ff6b1a;
+    background:rgba(255,107,26,.12);
+    transform:translateY(-2px);
+}
+#tab-home:checked~.bottom-nav label[for="tab-home"],
+#tab-about:checked~.bottom-nav label[for="tab-about"],
+#tab-admissions:checked~.bottom-nav label[for="tab-admissions"],
+#tab-gallery:checked~.bottom-nav label[for="tab-gallery"]{
+    color:#ff6b1a;
+    background:rgba(255,107,26,.12);
+}
+
+.hero,.heroi{
+    background:#1B365D;
+    color:white;
+    padding:36px 24px;
+    border-radius:22px;
+    border-left:10px solid #A0AEC0;
+    text-align:center;
+    margin-top:10px;
+}
+.brand-title{
+    font-size:clamp(1.8rem,7vw,3rem);
+    font-weight:900;
+    letter-spacing:.02em;
+    line-height:1.15;
+    animation:fadeUp .9s ease forwards;
+}
+.brand-tagline{
+    margin-top:10px;
+    font-size:1rem;
+    font-weight:600;
+    color:#CBD5E0;
+}
+.hero-sub{
+    margin-top:14px;
+    font-size:1rem;
+    color:#E2E8F0;
+    line-height:1.6;
+}
+.cta-row{
+    margin-top:18px;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.cta-btn{
+    background:#ff6b1a;
+    color:white;
+    font-weight:800;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    padding:12px 20px;
+    border-radius:999px;
+    cursor:pointer;
+    border:none;
+    display:inline-block;
+    text-decoration:none;
+}
+.cta-btn.secondary{
+    background:transparent;
+    border:2px solid #A0AEC0;
+    color:white;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.stat{
+    background:#2C5282;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:20px;
+    border-left:10px solid #A0AEC0;
+    margin-top:16px;
+}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat-num{font-size:1.8rem;font-weight:900}
+.stat-label{
+    font-size:.72rem;color:#CBD5E0;text-transform:uppercase;
+    letter-spacing:.04em;margin-top:4px
+}
+.op{
+    background:#E1E8F0;
+    text-align:left;
+    padding:24px 20px;
+    border-radius:20px;
+    border-left:10px solid #A0AEC0;
+    margin-top:16px;
+}
+.op h3{color:#1B365D;font-size:1.1rem;margin-bottom:6px}
+.op p{color:#4A5568;font-size:.92rem}
+.section-label{
+    font-size:.72rem;font-weight:900;letter-spacing:.12em;
+    text-transform:uppercase;color:#ff6b1a;
+    margin-top:28px;margin-bottom:6px
+}
+.timeline{
+    background:#E1E8F0;border-left:10px solid #A0AEC0;
+    border-radius:20px;padding:24px 20px;margin-top:16px
+}
+.timeline-item{padding:10px 0;border-bottom:1px solid #CBD5E0}
+.timeline-item:last-child{border-bottom:none}
+.timeline-year{color:#1B365D;font-weight:900;font-size:.95rem}
+.timeline-text{color:#4A5568;font-size:.88rem;margin-top:2px}
+
+.spline-wrap{
+    margin-top:16px;border-radius:20px;overflow:hidden;
+    border:3px solid #1B365D;background:#1B365D;height:320px
+}
+.spline-wrap spline-viewer{width:100%;height:100%;display:block}
+
+.contact-card{
+    background:#E1E8F0;border-left:10px solid #A0AEC0;
+    border-radius:20px;padding:24px 20px;margin-top:16px
+}
+.contact-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0}
+.contact-row strong{display:block;color:#1B365D;font-size:.9rem}
+.contact-row span{color:#4A5568;font-size:.88rem}
+
+.gallery-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px
+}
+.gallery-grid img{
+    width:100%;height:160px;object-fit:contain;background:#1B365D;
+    border-radius:14px;border:3px solid #1B365D;display:block
+}
+.gallery-grid img.wide{grid-column:span 2;height:220px}
+.gallery-caption{font-size:.78rem;color:#4A5568;text-align:center;margin-top:4px}
+
+/* Admissions */
+.admission-poster{
+    width:100%;display:block;margin:0 auto 22px;
+    border-radius:22px;border:4px solid #1B365D;
+    box-shadow:0 12px 35px rgba(27,54,93,.22)
+}
+.admission-hero{
+    background:#1B365D;color:white;border-radius:22px;
+    padding:30px 22px;text-align:center;margin-bottom:18px;
+    position:relative;overflow:hidden
+}
+.admission-hero:before{
+    content:"✦";position:absolute;font-size:100px;right:-8px;top:-38px;
+    color:rgba(255,255,255,.08)
+}
+.admission-hero h1{
+    font-size:clamp(1.7rem,7vw,2.6rem);font-weight:900;color:white;margin:7px 0
+}
+.admission-hero .open{
+    color:#ffb000;font-size:1.05rem;font-weight:900;
+    letter-spacing:.1em;text-transform:uppercase
+}
+.admission-hero p{color:#E2E8F0;margin-top:10px}
+.admission-badge{
+    display:inline-block;background:#ff6b1a;color:white;
+    padding:9px 16px;border-radius:999px;font-weight:900;margin-top:15px
+}
+.admission-card{
+    background:#fff;border-radius:20px;padding:22px 20px;margin-top:16px;
+    border-left:8px solid #ff6b1a;box-shadow:0 5px 20px rgba(0,0,0,.08)
+}
+.admission-card h3{color:#1B365D;margin-bottom:8px;font-size:1.15rem}
+.admission-card p{color:#4A5568;line-height:1.6}
+.admission-list{list-style:none;margin-top:12px}
+.admission-list li{
+    padding:10px 0;border-bottom:1px solid #E2E8F0;color:#4A5568
+}
+.admission-list li:last-child{border-bottom:none}
+.admission-list li:before{
+    content:"✓";color:#ff6b1a;font-weight:900;margin-right:10px
+}
+.course-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px
+}
+.course-box{
+    background:#FDF6E3;border:2px solid #E1E8F0;border-radius:16px;
+    padding:18px 12px;text-align:center
+}
+.course-box .icon{font-size:2rem;margin-bottom:8px}
+.course-box h4{color:#1B365D;font-size:.9rem}
+.course-box p{font-size:.75rem;margin-top:5px}
+.admission-steps{display:grid;gap:14px;margin-top:15px}
+.admission-step{display:flex;align-items:flex-start;gap:14px}
+.step-number{
+    min-width:38px;height:38px;border-radius:50%;background:#1B365D;
+    color:white;display:flex;align-items:center;justify-content:center;font-weight:900
+}
+.step-content h4{color:#1B365D;margin-bottom:3px}
+.step-content p{font-size:.82rem}
+.admission-cta{
+    background:#ff6b1a;color:white;border-radius:22px;
+    padding:28px 20px;text-align:center;margin-top:20px
+}
+.admission-cta h2{color:white;margin-bottom:8px}
+.admission-cta p{color:white;opacity:.95}
+.admission-cta .cta-btn{background:#1B365D;margin-top:15px}
+.notice{
+    background:#FFF3CD;border:2px solid #FFD166;border-radius:16px;
+    padding:16px;margin-top:16px;color:#664D03
+}
+.notice strong{display:block;margin-bottom:5px}
+.admission-mini{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px
+}
+.mini-box{
+    background:#1B365D;color:white;border-radius:15px;padding:16px;text-align:center
+}
+.mini-box strong{display:block;font-size:1.15rem}
+.mini-box span{font-size:.7rem;color:#CBD5E0;text-transform:uppercase}
+
+.fab-wrap{
+    position:fixed;right:16px;bottom:86px;display:flex;
+    flex-direction:column;gap:12px;z-index:90
+}
+.fab{
+    width:54px;height:54px;border-radius:50%;display:flex;
+    align-items:center;justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.25);color:white;text-decoration:none
+}
+.fab svg{
+    width:26px;height:26px;stroke:white;fill:none;stroke-width:2;
+    stroke-linecap:round;stroke-linejoin:round
+}
+.fab.whatsapp{background:#25D366}
+.fab.phone{background:#ff6b1a}
+
+@media(min-width:650px){
+    .page{padding-left:30px;padding-right:30px}
+    .course-grid{grid-template-columns:repeat(3,1fr)}
+    .admission-mini{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+
+<body>
+
+<input type="radio" name="tab" id="tab-home" checked>
+<input type="radio" name="tab" id="tab-about">
+<input type="radio" name="tab" id="tab-admissions">
+<input type="radio" name="tab" id="tab-gallery">
+
+<!-- HOME -->
+<div id="home" class="page">
+
+    <div class="heroi">
+        <h1 class="brand-title">Shristi Art Academy</h1>
+        <p class="brand-tagline">Nurturing Artists Since 1976</p>
+        <p class="hero-sub">
+            India's most trusted drawing academy, shaping young talent
+            into confident artists for nearly five decades.
+        </p>
+
+        <div class="cta-row">
+            <label for="tab-admissions" class="cta-btn">Admissions Open</label>
+            <label for="tab-gallery" class="cta-btn secondary">View Gallery</label>
+        </div>
+    </div>
+
+    <div class="op">
+        <h3>Verified Academy</h3>
+        <p>
+            Shristi Art Academy is committed to providing authentic,
+            trusted and creative art education for students and families.
+        </p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-grid">
+            <div><div class="stat-num">12,000+</div><div class="stat-label">Students Trained</div></div>
+            <div><div class="stat-num">49+</div><div class="stat-label">Years of Legacy</div></div>
+            <div><div class="stat-num">1976</div><div class="stat-label">Established</div></div>
+            <div><div class="stat-num">100%</div><div class="stat-label">Dedication</div></div>
+        </div>
+    </div>
+
+    <div class="section-label">What We Offer</div>
+
+    <div class="op"><h3>Foundation Drawing</h3><p>Structured lessons in shading, proportion and perspective for beginners of all ages.</p></div>
+    <div class="op"><h3>Painting & Colour Work</h3><p>Watercolour, poster colour and mixed media guided by experienced instructors.</p></div>
+    <div class="op"><h3>Competition & Exam Prep</h3><p>Focused training for school art exams and district/state-level art competitions.</p></div>
+
+    <div class="section-label">Why Families Choose Us</div>
+
+    <div class="op"><h3>Experienced Faculty</h3><p>Passionate instructors focused on building skill and confidence.</p></div>
+    <div class="op"><h3>Flexible Batches</h3><p>Morning, evening and weekend options depending on batch availability.</p></div>
+    <div class="op"><h3>Affordable Fees</h3><p>Quality art education at accessible pricing with materials guidance.</p></div>
+
+
+    <div class="section-label">Our Learning Approach</div>
+
+    <div class="op">
+        <h3>👀 Observe</h3>
+        <p>Students learn to look carefully at shapes, proportions, light, colour and everyday objects before putting them on paper.</p>
+    </div>
+
+    <div class="op">
+        <h3>✏️ Practice</h3>
+        <p>Regular guided exercises help students strengthen drawing fundamentals, hand control, shading and composition.</p>
+    </div>
+
+    <div class="op">
+        <h3>🎨 Experiment</h3>
+        <p>Students explore different colours, techniques and creative ideas while developing their own artistic style.</p>
+    </div>
+
+    <div class="op">
+        <h3>🌟 Create With Confidence</h3>
+        <p>Our goal is not only to teach art, but also to encourage patience, imagination, confidence and pride in every student's work.</p>
+    </div>
+
+    <div class="section-label">Perfect For</div>
+
+    <div class="course-grid">
+        <div class="course-box">
+            <div class="icon">👧</div>
+            <h4>Young Learners</h4>
+            <p>Build strong creative foundations.</p>
+        </div>
+        <div class="course-box">
+            <div class="icon">🏫</div>
+            <h4>School Students</h4>
+            <p>Improve school art skills.</p>
+        </div>
+        <div class="course-box">
+            <div class="icon">🏆</div>
+            <h4>Competitors</h4>
+            <p>Prepare for art competitions.</p>
+        </div>
+        <div class="course-box">
+            <div class="icon">🎯</div>
+            <h4>Exam Students</h4>
+            <p>Practice with focused guidance.</p>
+        </div>
+    </div>
+
+    <div class="section-label">A Creative Community</div>
+
+    <div class="op">
+        <h3>More Than A Drawing Class</h3>
+        <p>Students learn in an encouraging environment where mistakes become part of the learning process and every improvement is celebrated.</p>
+    </div>
+
+    <div class="admission-cta">
+        <h2>Ready To Start Creating?</h2>
+        <p>Explore our admission information and contact the academy for the latest batch availability.</p>
+        <div class="cta-row">
+            <label for="tab-admissions" class="cta-btn">Explore Admissions</label>
+        </div>
+    </div>
+
+    <div class="section-label">Get In Touch</div>
+
+    <div class="spline-wrap">
+        <spline-viewer url="https://prod.spline.design/HRVwxD9ESzLOEcj3/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-row"><div><strong>Phone / WhatsApp</strong><span>+91 73845 06600</span></div></div>
+        <div class="contact-row"><div><strong>Since</strong><span>1976</span></div></div>
+        <div class="contact-row"><div><strong>Students Trained</strong><span>12,000+</span></div></div>
+        <div class="cta-row">
+            <a href="https://wa.me/917384506600" target="_blank" rel="noopener" class="cta-btn">Message on WhatsApp</a>
+            <a href="tel:+917384506600" class="cta-btn secondary">Call Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+    <h2>About Shristi Art Academy</h2>
+    <p>
+        Shristi Art Academy is a creative learning space dedicated to helping
+        students discover the joy of drawing, painting and artistic expression.
+        Since 1976, the academy has focused on developing strong fundamentals
+        while allowing every learner to grow at their own pace.
+    </p>
+
+    <div class="section-label">Our Story</div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-year">1976 — The Beginning</div>
+            <div class="timeline-text">The academy began with a simple vision: make quality drawing guidance accessible to students who love art.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-year">Growing Through Generations</div>
+            <div class="timeline-text">Drawing, sketching and painting became part of the creative journeys of students from different generations.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-year">Expanding Skills</div>
+            <div class="timeline-text">The learning experience grew to include colour work, perspective, shading, competition preparation and exam-focused practice.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-text">Shristi Art Academy continues to encourage students to learn patiently, practise consistently and create confidently.</div>
+        </div>
+    </div>
+
+    <div class="section-label">Our Mission</div>
+
+    <div class="admission-card">
+        <h3>Make Creativity A Skill For Life</h3>
+        <p>
+            We aim to create an environment where students can learn artistic
+            fundamentals without losing their imagination. Every lesson is an
+            opportunity to observe, practise, experiment and improve.
+        </p>
+    </div>
+
+    <div class="section-label">What We Believe</div>
+
+    <div class="op">
+        <h3>🎯 Fundamentals Matter</h3>
+        <p>Strong foundations in shape, proportion, perspective, composition and shading make advanced artwork easier to understand.</p>
+    </div>
+
+    <div class="op">
+        <h3>🧠 Every Student Learns Differently</h3>
+        <p>Students have different interests, speeds and strengths. Encouragement and patient guidance help each learner progress.</p>
+    </div>
+
+    <div class="op">
+        <h3>💪 Practice Builds Confidence</h3>
+        <p>Consistent practice turns uncertainty into familiarity and helps students approach new subjects with confidence.</p>
+    </div>
+
+    <div class="op">
+        <h3>❤️ Art Should Be Enjoyable</h3>
+        <p>A positive learning environment makes it easier for students to experiment, make mistakes and keep improving.</p>
+    </div>
+
+    <div class="section-label">Skills Students Explore</div>
+
+    <div class="course-grid">
+        <div class="course-box"><div class="icon">✏️</div><h4>Line Work</h4><p>Control, outlines and confident strokes.</p></div>
+        <div class="course-box"><div class="icon">◐</div><h4>Shading</h4><p>Light, shadow and tonal values.</p></div>
+        <div class="course-box"><div class="icon">📐</div><h4>Perspective</h4><p>Depth, space and proportion.</p></div>
+        <div class="course-box"><div class="icon">🎨</div><h4>Colour</h4><p>Colour mixing and visual balance.</p></div>
+        <div class="course-box"><div class="icon">🖼️</div><h4>Composition</h4><p>Arranging elements effectively.</p></div>
+        <div class="course-box"><div class="icon">💡</div><h4>Creativity</h4><p>Ideas, imagination and expression.</p></div>
+    </div>
+
+    <div class="section-label">For Parents</div>
+
+    <div class="admission-card">
+        <h3>Why Art Education Matters</h3>
+        <p>
+            Art gives children a space to observe, think, experiment and
+            communicate ideas visually. Regular creative practice can also
+            encourage patience, attention to detail and confidence in
+            presenting original work.
+        </p>
+    </div>
+
+    <div class="section-label">Our Promise</div>
+
+    <div class="admission-cta">
+        <h2>Every Student Can Create</h2>
+        <p>
+            We encourage students to focus on progress rather than perfection —
+            one sketch, one colour and one idea at a time.
+        </p>
+        <div class="cta-row">
+            <label for="tab-admissions" class="cta-btn">See Admission Details</label>
+            <label for="tab-gallery" class="cta-btn secondary">See Gallery</label>
+        </div>
+    </div>
+</div>
+
+<!-- ADMISSIONS -->
+<div id="admissions" class="page">
+
+    <div class="admission-hero">
+        <div class="open">Admissions Open</div>
+        <h1>Start Your Creative Journey</h1>
+        <p>
+            Learn drawing, painting and sketching with experienced guidance
+            at Shristi Art Academy.
+        </p>
+        <div class="admission-badge">🎨 New Batches Starting Soon</div>
+    </div>
+
+    <img
+        class="admission-poster"
+        src="https://i.postimg.cc/4d1d9WVR/file-0000000023e482079335c55ea8d52c61.png"
+        alt="Shristi Art Academy New Admissions Open poster"
+    >
+
+    <div class="section-label">Admission Highlights</div>
+
+    <div class="admission-mini">
+        <div class="mini-box"><strong>12,000+</strong><span>Students</span></div>
+        <div class="mini-box"><strong>49+</strong><span>Years Legacy</span></div>
+        <div class="mini-box"><strong>1976</strong><span>Established</span></div>
+        <div class="mini-box"><strong>100%</strong><span>Dedication</span></div>
+    </div>
+
+    <div class="section-label">Why Join Shristi?</div>
+
+    <div class="admission-card">
+        <h3>🎨 Learn. Create. Grow.</h3>
+        <p>
+            Whether your child is holding a pencil for the first time or
+            already loves creating artwork, our structured classes help
+            students develop creativity, confidence and artistic skills.
+        </p>
+        <ul class="admission-list">
+            <li>Experienced art instructors</li>
+            <li>Personal attention for students</li>
+            <li>Beginner-friendly learning</li>
+            <li>Drawing, sketching and painting</li>
+            <li>Competition and exam preparation</li>
+            <li>Flexible batch options</li>
+            <li>Affordable art education</li>
+        </ul>
+    </div>
+
+    <div class="section-label">Courses Available</div>
+
+    <div class="admission-card">
+        <div class="course-grid">
+            <div class="course-box"><div class="icon">✏️</div><h4>Foundation Drawing</h4><p>Basic drawing, shapes, proportion and observation.</p></div>
+            <div class="course-box"><div class="icon">🎨</div><h4>Painting</h4><p>Watercolour, poster colour and creative painting.</p></div>
+            <div class="course-box"><div class="icon">🖌️</div><h4>Sketching</h4><p>Pencil sketching, shading and realistic drawing.</p></div>
+            <div class="course-box"><div class="icon">🏆</div><h4>Competition Prep</h4><p>Focused preparation for art competitions.</p></div>
+            <div class="course-box"><div class="icon">📚</div><h4>Exam Preparation</h4><p>Guidance for school and art examinations.</p></div>
+            <div class="course-box"><div class="icon">🌟</div><h4>Creative Art</h4><p>Explore imagination, colours and mixed media.</p></div>
+        </div>
+    </div>
+
+    <div class="section-label">Who Can Join?</div>
+
+    <div class="admission-card">
+        <ul class="admission-list">
+            <li>School students</li>
+            <li>Beginners</li>
+            <li>Young aspiring artists</li>
+            <li>Students preparing for competitions</li>
+            <li>Students preparing for art examinations</li>
+            <li>Hobby learners</li>
+            <li>Anyone interested in learning art</li>
+        </ul>
+    </div>
+
+    <div class="section-label">How To Enroll</div>
+
+    <div class="admission-card">
+        <div class="admission-steps">
+            <div class="admission-step">
+                <div class="step-number">1</div>
+                <div class="step-content"><h4>Contact Us</h4><p>Call or message us on WhatsApp to enquire about available batches.</p></div>
+            </div>
+            <div class="admission-step">
+                <div class="step-number">2</div>
+                <div class="step-content"><h4>Choose Your Batch</h4><p>Select a suitable class schedule according to availability.</p></div>
+            </div>
+            <div class="admission-step">
+                <div class="step-number">3</div>
+                <div class="step-content"><h4>Reserve Your Seat</h4><p>Confirm your admission and reserve a place in the selected batch.</p></div>
+            </div>
+            <div class="admission-step">
+                <div class="step-number">4</div>
+                <div class="step-content"><h4>Start Creating</h4><p>Bring your creativity and begin your artistic journey.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notice">
+        <strong>📢 Admission Enquiry</strong>
+        Contact the academy for current batch timings, available seats,
+        fees and required materials before joining.
+    </div>
+
+    <div class="section-label">What Students Develop</div>
+
+    <div class="admission-card">
+        <ul class="admission-list">
+            <li>Observation and visual thinking</li>
+            <li>Drawing fundamentals</li>
+            <li>Colour understanding</li>
+            <li>Shading and perspective</li>
+            <li>Creative expression</li>
+            <li>Confidence in presenting artwork</li>
+            <li>Regular practice habits</li>
+        </ul>
+    </div>
+
+    <div class="section-label">Our Legacy</div>
+
+    <div class="admission-card">
+        <h3>Since 1976</h3>
+        <p>
+            Shristi Art Academy has been nurturing creativity for nearly
+            five decades, helping generations of students discover their
+            artistic abilities.
+        </p>
+    </div>
+
+    <div class="admission-cta">
+        <h2>🎨 Admissions Are Open!</h2>
+        <p>
+            Don't miss the opportunity to develop your artistic skills.
+            Contact us today for admission details.
+        </p>
+        <div class="cta-row">
+            <a href="https://wa.me/917384506600" target="_blank" rel="noopener" class="cta-btn">💬 WhatsApp Us</a>
+            <a href="tel:+917384506600" class="cta-btn">📞 Call Now</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="page">
+    <h2>Gallery</h2>
+    <p>A glimpse of student artwork, classes and life at the academy.</p>
+
+    <div class="section-label">Student Artwork & Academy Life</div>
+
+    <div class="gallery-grid">
+        <img class="wide" src="https://i.postimg.cc/jqfk6BFd/IMG-20260821-WA0003.jpg" alt="Shristi Art Academy artwork 1">
+        <img src="https://i.postimg.cc/Hs4ZRXHD/IMG-20260821-WA0004.jpg" alt="Shristi Art Academy artwork 2">
+        <img src="https://i.postimg.cc/nh3dcxC0/IMG-20260821-WA0005.jpg" alt="Shristi Art Academy artwork 3">
+        <img src="https://i.postimg.cc/MG4dVY0K/IMG-20260821-WA0007.jpg" alt="Shristi Art Academy artwork 4">
+        <img src="https://i.postimg.cc/7h19v8F5/IMG-20260821-WA0002.jpg" alt="Shristi Art Academy artwork 5">
+    </div>
+
+    <p class="gallery-caption">
+        More photos can be added regularly to showcase student achievements,
+        classes and exhibitions.
+    </p>
+
+    <div class="section-label">What You'll See</div>
+
+    <div class="course-grid">
+        <div class="course-box"><div class="icon">🖼️</div><h4>Student Artwork</h4><p>Drawings, paintings and creative projects.</p></div>
+        <div class="course-box"><div class="icon">✏️</div><h4>Sketching</h4><p>Pencil work, portraits and studies.</p></div>
+        <div class="course-box"><div class="icon">🎨</div><h4>Colour Work</h4><p>Colourful paintings and mixed media.</p></div>
+        <div class="course-box"><div class="icon">🏫</div><h4>Class Moments</h4><p>Students learning and practising.</p></div>
+        <div class="course-box"><div class="icon">🏆</div><h4>Achievements</h4><p>Creative milestones and competition work.</p></div>
+        <div class="course-box"><div class="icon">🌟</div><h4>Creative Ideas</h4><p>Imagination brought to paper.</p></div>
+    </div>
+
+    <div class="section-label">Share Your Artwork</div>
+
+    <div class="op">
+        <h3>Want Your Work Featured?</h3>
+        <p>
+            Students and families can contact the academy regarding artwork,
+            achievements and academy activities they would like to showcase.
+        </p>
+    </div>
+
+    <div class="section-label">Admissions</div>
+
+    <div class="admission-cta">
+        <h2>New Batches Are Open</h2>
+        <p>Visit the Admissions section for courses, enrollment steps and contact options.</p>
+        <div class="cta-row">
+            <label for="tab-admissions" class="cta-btn">Open Admissions</label>
+        </div>
+    </div>
+
+    <div class="section-label">Join Our Next Batch</div>
+
+    <div class="op">
+        <h3>New Admissions Open</h3>
+        <p>
+            Seats are filling up for the next foundation batch.
+            Contact us on WhatsApp or call to reserve your spot.
+        </p>
+        <div class="cta-row">
+            <label for="tab-admissions" class="cta-btn">View Admissions</label>
+        </div>
+    </div>
+</div>
+
+<!-- Floating buttons -->
+<div class="fab-wrap">
+    <a class="fab whatsapp" href="https://wa.me/917384506600" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M21 11.5a8.5 8.5 0 0 1-11.9 7.8L3 21l1.8-6a8.5 8.5 0 1 1 16.2-3.5z"/>
+        </svg>
+    </a>
+    <a class="fab phone" href="tel:+917384506600" aria-label="Call us">
+        <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+    </a>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+
+    <label for="tab-home">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 11l9-8 9 8"/>
+            <path d="M5 10v10h14V10"/>
+        </svg>
+        Home
+    </label>
+
+    <label for="tab-about">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>
+        </svg>
+        About
+    </label>
+
+    <label for="tab-admissions">
+        <svg viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8h8"/>
+            <path d="M8 12h8"/>
+            <path d="M8 16h5"/>
+        </svg>
+        Admissions
+    </label>
+
+    <label for="tab-gallery">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="9" r="1.5"/>
+            <path d="M21 15l-5-5-9 9"/>
+        </svg>
+        Gallery
+    </label>
+
+</div>
+
+</body>
+</html>
